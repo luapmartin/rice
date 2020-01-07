@@ -31,13 +31,14 @@ Imagine that you have a blog `Post` with `Comments` and your model looks like th
 ```python
 class Post(object):
     def __init__(self, author, comments):
-        self.author=author
-        self.comments=comments
+        self.author = author
+        self.comments = comments
         
 class Comment(object):
     def __init__(self, username, body):
-        self.username=username
-        self.body=body
+        self.username = username
+        self.body = body
+        self.rating = rating
 ```
 Now you want to serialize and deserialize it easily. Buy using **rice**, just document your classes, and you are all set:
 ```python
